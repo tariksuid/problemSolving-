@@ -49,35 +49,7 @@ public class Driver4 {
 		return false;
 	}
 
-	private static int maxTrip(int[] ar) {
-
-		if (ar.length == 3) {
-			return ar[0] * ar[1] * ar[2];
-		}
-
-		int max = Integer.MIN_VALUE;
-		int min = Integer.MAX_VALUE;
-		int maxProduct = ar[0] * ar[1] * ar[2];
-		for (int i = 0; i < ar.length; i++) {
-			if (i > 3) {
-				if (ar[i] > 0 && min < ar[i]) {
-					maxProduct = Math.max(maxProduct, (maxProduct / min) * ar[i]);
-				} else {
-					maxProduct = Math.max(maxProduct, max * min * ar[i]);
-				}
-
-			}
-			if (ar[i] > max)
-				max = ar[i];
-			if (min > ar[i])
-				min = ar[i];
-
-		}
-		return maxProduct;
-
-	}
-
-}
+ 
 
 class Node1 {
 	int val;
